@@ -1,3 +1,5 @@
+
+Copy code
 <!DOCTYPE html> 
 <html lang="pt-br">
 <head>
@@ -17,28 +19,28 @@
 <center> 
     <div id="divBusca">
         <input type="text" id="txtBusca" placeholder="Buscar..."/>
-        <img src="lupa A.png" id="btnBusca" alt="Buscar" width="30" height="30"/>
+        <button onclick="pesquisarArtigo()">  <img  src="lupa A.png" id="btnBusca" alt="Buscar" width="30" height="30"/></button>
     </div>
 </center>
 <script>
     function pesquisarArtigo() {
         // Obter o valor do campo de pesquisa
-        var termoPesquisa = document.getElementById("txtbusca").value.toLowerCase();
+        var termoPesquisa = document.getElementById("txtBusca").value.toLowerCase();
         console.log(termoPesquisa)
-        // Verificar se o termo de pesquisa é "Artigo 1"
+        // Verificar se o termo de pesquisa é "Meio ambiente"
         if (termoPesquisa === "meio ambiente") {
             // Redirecionar para a página do Artigo 1
             window.location.href = "pesquisa1";
         }
-        // Verificar se o termo de pesquisa é "Artigo 2"
-        else if (termoPesquisa === "Nutrição") {
+        // Verificar se o termo de pesquisa é "Nutrição"
+        else if (termoPesquisa === "nutrição") {
             // Redirecionar para a página do Artigo 2
             window.location.href = "pesquisa2";
-        } else if (termoPesquisa === "Academia"){
+        } else if (termoPesquisa === "academia"){
             window.location.href = "pesquisa3";
         }
 
-        else if (termoPesquisa === 'historia e cultura'){
+        else if (termoPesquisa === 'história e cultura'){
             window.location.href = "pesquisa4";
         }
            
@@ -47,7 +49,7 @@
     }
 
     // Adicionar um listener para a tecla Enter no campo de pesquisa
-    document.getElementById("search").addEventListener("keyup", function(event) {
+    document.getElementById("txtBusca").addEventListener("keyup", function(event) {
         // Verificar se a tecla pressionada é Enter (código 13)
         if (event.keyCode === 13) {
             // Chamar a função de pesquisa
@@ -86,4 +88,3 @@
 
 </body>
 </html>
-    
