@@ -20,6 +20,42 @@
         <img src="lupa A.png" id="btnBusca" alt="Buscar" width="30" height="30"/>
     </div>
 </center>
+<script>
+    function pesquisarArtigo() {
+        // Obter o valor do campo de pesquisa
+        var termoPesquisa = document.getElementById("txtbusca").value.toLowerCase();
+        console.log(termoPesquisa)
+        // Verificar se o termo de pesquisa é "Artigo 1"
+        if (termoPesquisa === "meio ambiente") {
+            // Redirecionar para a página do Artigo 1
+            window.location.href = "pesquisa1";
+        }
+        // Verificar se o termo de pesquisa é "Artigo 2"
+        else if (termoPesquisa === "Nutrição") {
+            // Redirecionar para a página do Artigo 2
+            window.location.href = "pesquisa2";
+        } else if (termoPesquisa === "Academia"){
+            window.location.href = "pesquisa3";
+        }
+
+        else if (termoPesquisa === 'historia e cultura'){
+            window.location.href = "pesquisa4";
+        }
+           
+            
+        
+    }
+
+    // Adicionar um listener para a tecla Enter no campo de pesquisa
+    document.getElementById("search").addEventListener("keyup", function(event) {
+        // Verificar se a tecla pressionada é Enter (código 13)
+        if (event.keyCode === 13) {
+            // Chamar a função de pesquisa
+            pesquisarArtigo();
+        }
+    });
+
+</script>
 <img src="foto01.png" alt="logo" width="100" height="100">
 <center>
 <div>
